@@ -8,7 +8,6 @@ class Bank:
     database = "data.json"
     data = []
 
-    # ---------------- Load Data ---------------- #
 
     try:
         if Path(database).exists():
@@ -46,8 +45,7 @@ class Bank:
             if not exist:
                 return account
 
-    # ---------------- Find User ---------------- #
-
+   
     def find_user(self):
 
         accnumber = input("Enter Account Number : ")
@@ -68,7 +66,7 @@ class Bank:
         print("Invalid Account Number or PIN")
         return None
 
-    # ---------------- Create Account ---------------- #
+    
 
     def CreatAccount(self):
 
@@ -121,7 +119,7 @@ class Bank:
 
         print("\nPlease save your Account Number.\n")
 
-    # ---------------- Deposit ---------------- #
+   
 
     def Depositemoney(self):
 
@@ -152,7 +150,7 @@ class Bank:
 
         print("Current Balance :", user["Balance"])
 
-    # ---------------- Withdraw ---------------- #
+    
 
     def Withdrawmoney(self):
 
@@ -183,8 +181,7 @@ class Bank:
 
         print("Remaining Balance :", user["Balance"])
 
-    # ---------------- Details ---------------- #
-
+   
     def details(self):
 
         user = self.find_user()
@@ -197,7 +194,8 @@ class Bank:
         for key, value in user.items():
             print(f"{key} : {value}")
 
-    # ---------------- Update ---------------- #
+    
+            
 
     def Updatedetails(self):
 
@@ -237,7 +235,7 @@ class Bank:
 
         print("Details Updated Successfully")
 
-    # ---------------- Delete ---------------- #
+  
 
     def delete(self):
 
